@@ -1,5 +1,7 @@
 compile:
   override:
+    - pwd
+    - ls -l
     - mkdir build
     - cd build
     - cmake ..
