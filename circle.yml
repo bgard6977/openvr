@@ -8,8 +8,8 @@ test:
     - rm -rf bin/
     - rm -rf lib/
     #- rm -rf samples/thirdparty
-    - mkdir build && cd build && ~/cmake-3.7.2-Linux-x86_64/bin/cmake -DBUILD_SHARED=ON .. && make
-    - cd samples && mkdir build && cd build && ~/cmake-3.7.2-Linux-x86_64/bin/cmake .. && make
+    - mkdir build && cd build && ~/openvr/cmake-3.7.2-Linux-x86_64/bin/cmake -DBUILD_SHARED=ON .. && make
+    - cd samples && mkdir build && cd build && ~/openvr/cmake-3.7.2-Linux-x86_64/bin/cmake .. && make
 general:
   artifacts:
     - "headers"
