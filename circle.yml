@@ -1,4 +1,4 @@
-compile:
+test:
   override:
     - pwd
     - ls -l
