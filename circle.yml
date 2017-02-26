@@ -3,11 +3,13 @@ test:
     - cmake --version
     - pwd
     - ls -l
+    - curl -s https://cmake.org/files/v3.7/cmake-3.7.2-Linux-x86_64.tar.gz --output cmake-3.7.2-Linux-x86_64.tar.gz
+    - tar -xf cmake-3.7.2-Linux-x86_64.tar.gz
     - rm -rf bin/
     - rm -rf lib/
     #- rm -rf samples/thirdparty
-    - mkdir build && cd build && cmake -DBUILD_SHARED=ON .. && make
-    - cd samples && mkdir build && cd build && cmake .. && make
+    - mkdir build && cd build && ~/cmake-3.7.2-Linux-x86_64/bin/cmake -DBUILD_SHARED=ON .. && make
+    - cd samples && mkdir build && cd build && ~/cmake-3.7.2-Linux-x86_64/bin/cmake .. && make
 general:
   artifacts:
     - "headers"
