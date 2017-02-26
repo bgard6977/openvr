@@ -1,5 +1,6 @@
 test:
   override:
+    - cmake --version
     - pwd
     - ls -l
     - rm -rf bin/
