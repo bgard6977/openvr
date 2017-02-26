@@ -3,6 +3,4 @@ compile:
     - pwd
     - ls -l
     - mkdir build
-    - cd build
-    - cmake ..
-    - make
+    - cd build && cmake .. && make
