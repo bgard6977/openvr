@@ -3,8 +3,8 @@ test:
     - cmake --version
     - pwd
     - ls -l
-    - curl -s https://cmake.org/files/v3.7/cmake-3.7.2-Linux-x86_64.tar.gz --output cmake-3.7.2-Linux-x86_64.tar.gz
-    - tar -xf cmake-3.7.2-Linux-x86_64.tar.gz
+    - curl -s https://cmake.org/files/v3.7/cmake-3.7.2-Linux-x86_64.tar.gz --output cmake-3.7.2-Linux-x86_64.tar.gz && tar -xf cmake-3.7.2-Linux-x86_64.tar.gz
+    - curl -s https://steamcdn-a.akamaihd.net/client/installer/steam.deb --ouput steam.deb && sudo dpkg steam.deb
     - rm -rf bin/
     - rm -rf lib/
     #- rm -rf samples/thirdparty
