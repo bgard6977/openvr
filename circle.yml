@@ -4,14 +4,15 @@ test:
     - pwd
     - ls -l
     - curl -s https://cmake.org/files/v3.7/cmake-3.7.2-Linux-x86_64.tar.gz --output cmake-3.7.2-Linux-x86_64.tar.gz && tar -xf cmake-3.7.2-Linux-x86_64.tar.gz
-    - curl -s https://steamcdn-a.akamaihd.net/client/installer/steam.deb --output steam.deb && sudo dpkg -i steam.deb
+    # - curl -s https://steamcdn-a.akamaihd.net/client/installer/steam.deb --output steam.deb && sudo dpkg -i steam.deb
     - rm -rf bin/
     - rm -rf lib/
     #- rm -rf samples/thirdparty
     - mkdir build && cd build && ~/openvr/cmake-3.7.2-Linux-x86_64/bin/cmake -DBUILD_SHARED=ON .. && make
-    - cd samples && mkdir build && cd build && ~/openvr/cmake-3.7.2-Linux-x86_64/bin/cmake .. && make
+    # - cd samples && mkdir build && cd build && ~/openvr/cmake-3.7.2-Linux-x86_64/bin/cmake .. && make
+    - tar -zcvf openvr-headers.tar.gz headers
+    - tar -zcvf openvr-linux64.tar.gz bin/linux64
 general:
   artifacts:
-    - "headers"
-    - "bin"
-    - "lib"
+    - "openvr-headers.tar.gz"
+    - "openvr-linux64.tar.gz"
