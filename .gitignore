@@ -1,0 +1,9 @@
+# CLion
+.idea/
+*.ipr
+*.iws
+*.iml
+cmake-build-debug/
+
+# cmake
+bin/
